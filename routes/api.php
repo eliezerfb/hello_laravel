@@ -20,7 +20,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::get('/nome/{nome}/{n}', function ($nome, $n) {
     $s = '';
     for ($i=0; $i<$n; $i++)
-        $s .= "<h1>Ola, $nome!</h1>";
+        $s .= "<h1>Olá, $nome!</h1>";
     echo $s;
  });
 
