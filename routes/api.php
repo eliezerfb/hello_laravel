@@ -16,3 +16,30 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('/nome/{nome}/{n}', function ($nome, $n) {
+    $s = '';
+    for ($i=0; $i<$n; $i++)
+        $s .= "<h1>Ola, $nome!</h1>";
+    echo $s;
+ });
+
+ Route::post('/hello1', function () {
+    return 'Hello World1 (POST)';
+ });
+ 
+ Route::delete('/hello1', function () {
+    return 'Hello World1 (DELETE)';
+ });
+ 
+ Route::put('/hello1', function () {
+    return 'Hello World1 (PUT)';
+ });
+ 
+ Route::patch('/hello1', function () {
+    return 'Hello World1 (PATCH)';
+ });
+ 
+ Route::options('/hello1', function () {
+    return 'Hello World1 (OPTIONS)';
+ });
