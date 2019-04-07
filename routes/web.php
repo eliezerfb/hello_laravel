@@ -31,3 +31,8 @@ Route::prefix('app')->group(function(){
         return 'Página About';
     });
 });
+
+
+Route::get('/nome', 'MeuControlador@getNome');
+
+Route::get('/nome/{id}', "MeuControlador@getNameByID");
