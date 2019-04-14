@@ -43,3 +43,5 @@ Route::get('/nome/{nome}/{n}', function ($nome, $n) {
  Route::options('/hello1', function () {
     return 'Hello World1 (OPTIONS)';
  });
+
+ Route::get('/nome/{id}', "MeuControlador@getNameByID");
