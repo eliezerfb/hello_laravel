@@ -22,6 +22,11 @@ class CustomerController extends Controller
         return Customer::find($id);
     }
 
+    public function all(){
+        $customers = Customer::all();
+        return $customers->toJson();
+    }
+
     public function delete($id){
         $customer = Customer::findOrFail($id);
         $customer->delete();
