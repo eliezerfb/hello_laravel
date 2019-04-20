@@ -9,10 +9,6 @@ use Illuminate\Http\Request;
 class CustomerController extends Controller
 {
     public function store(Request $request){
-        $customer = new Customer;
-        $customer->name = $request->name;
-        $customer->phone = $request->phone;
-        $customer->save();
-        // return $result;
+        return Customer::create($request->all());
     }
 }

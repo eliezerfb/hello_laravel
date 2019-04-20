@@ -47,7 +47,3 @@ Route::get('/nome/{nome}/{n}', function ($nome, $n) {
  Route::get('/nome/{id}', "MeuControlador@getNameByID");
 
  Route::post('/newcustomer', "CustomerController@store");
-
-//  Route::post('/newcustomer', function () {
-//     return 'Hello World1 (POST)';
-//  });
