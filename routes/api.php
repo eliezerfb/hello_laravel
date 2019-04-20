@@ -48,5 +48,5 @@ Route::get('/nome/{nome}/{n}', function ($nome, $n) {
 
  Route::post('/customer/new', "CustomerController@store");
  Route::get('/customer/{id}', "CustomerController@getCustomerByID");
- Route::post('/customer/update/{id}', "CustomerController@update");
- Route::get('/customer/delete/{id}', "CustomerController@delete");
+ Route::put('/customer/update/{id}', "CustomerController@update");
+ Route::delete('/customer/delete/{id}', "CustomerController@delete");
