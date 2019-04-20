@@ -11,4 +11,8 @@ class CustomerController extends Controller
     public function store(Request $request){
         return Customer::create($request->all());
     }
+
+    public function getCustomerByID($id){
+        return Customer::find($id);
+    }
 }
