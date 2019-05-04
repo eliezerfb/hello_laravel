@@ -8,6 +8,11 @@ class Customer extends Model
 {
     protected $fillable = [
         'name',
-        'phone'
+        'cnpj_cpf',
+        'phone',
+        'birthdate',
+        'address',
+        'city',
+        'state'
     ];
 }
