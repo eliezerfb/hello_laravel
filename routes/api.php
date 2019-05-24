@@ -51,3 +51,6 @@ Route::get('/nome/{nome}/{n}', function ($nome, $n) {
  Route::get('/customer/{id}', "CustomerController@getCustomerByID");
  Route::put('/customer/update/{id}', "CustomerController@update");
  Route::delete('/customer/delete/{id}', "CustomerController@delete");
+
+ Route::resource('debts', "DebtController");
+//  Route::post('/debts/store', "DebtController@store"); 
