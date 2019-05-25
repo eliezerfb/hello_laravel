@@ -35,6 +35,10 @@ class DebtController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'due' => 'required|date'
+        ]);
+
         $debt = Debt::create($request->all());
         return response()->json($debt->fresh(), 200);
     }
