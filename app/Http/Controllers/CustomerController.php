@@ -8,6 +8,10 @@ use Illuminate\Http\Request;
 
 class CustomerController extends Controller
 {
+    public function index(){
+        return Customer::with('debts')->get();
+    }
+
     public function store(Request $request){
         return Customer::create($request->all());
     }

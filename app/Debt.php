@@ -6,8 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Debt extends Model
 {
-
-    protected $with = ['customer'];
     
     protected $fillable = [
         'id',

@@ -15,4 +15,9 @@ class Customer extends Model
         'city',
         'state'
     ];
+
+    public function debts()
+    {
+        return $this->hasMany('App\Debt');
+    }
 }
