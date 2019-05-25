@@ -14,7 +14,7 @@ class DebtController extends Controller
      */
     public function index()
     {
-        return Debt::all();
+        return Debt::with('customer')->get();
     }
 
     /**
@@ -37,7 +37,7 @@ class DebtController extends Controller
     {
         $request->validate([
             'due' => 'required|date'
-        ]);
+        ]); 
 
         $debt = Debt::create($request->all());
         return response()->json($debt->fresh(), 200);
